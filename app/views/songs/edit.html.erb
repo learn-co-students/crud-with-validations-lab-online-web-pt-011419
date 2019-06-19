@@ -1,0 +1,11 @@
+<h1>Edit Song: </h1>
+
+<%=form_for @song do |s|%>
+  <%=s.text_field :title%>
+  <%=s.check_box :released%>
+  <%=s.number_field :release_year%>
+  <%=s.text_field :artist_name%>
+  <%=s.text_field :genre%>
+
+  <%=s.submit 'Edit Song'%>
+<%end%>

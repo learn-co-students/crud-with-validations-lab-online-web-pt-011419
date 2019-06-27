@@ -14,6 +14,11 @@ class Song < ApplicationRecord
     end 
 
     def same_song_in_one_year
-        errors.add(:base, "must not release same song in one year") if title == Song.find_by(name)
+        if Song.find_by(title: title, release_year: release_year)
+            same_title = Song.find_by(title: title, release_year: release_year).title 
+        else 
+            same_title = nil
+        end
+        errors.add(:base, "must not release same song in one year") if release_year != nil && title == same_title
     end
 end

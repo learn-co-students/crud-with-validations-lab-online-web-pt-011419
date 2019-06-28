@@ -1,0 +1,7 @@
+title: "Talisman",
+        artist_name: "Air",
+        release_year: 2007,
+        released: true,
+        genre: "Post-Rock"
+
+        rails g resource Song title:string artist_name:string release_year:integer released:boolean genre:string --no-test-framework

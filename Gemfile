@@ -9,9 +9,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-controller-testing'
 gem 'bootsnap'
+gem 'pry'
+gem 'byebug'
 group :development, :test do
   gem 'capybara'
-  gem 'pry'
+
 end
 
 group :development do
